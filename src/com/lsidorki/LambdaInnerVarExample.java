@@ -5,7 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 
-// 2
+/**
+ * Example 2
+ */
 public class LambdaInnerVarExample {
 
     public static void main(String[] args) {

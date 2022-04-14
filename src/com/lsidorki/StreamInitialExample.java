@@ -11,9 +11,11 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// 4
+/**
+ * Example 4
+ */
 public class StreamInitialExample {
-    private static final String CITY = "Gdynia";
+    private static final String CITY = "Wrocław";
     private static final Logger LOGGER = Logger.getLogger(StreamInitialExample.class.getName());
 
     public static void main(String[] args) {
@@ -32,21 +34,22 @@ public class StreamInitialExample {
         );
 
         streamBasicExample(playerListA);
-        mapExample(playerListA);
-        flatMapExample(playerListA, playerListB);
-        minMaxExample(playerListA, playerListB);
-        reduceAccumulatorExample(playerListA);
-        reduceExample(playerListA);
+//        mapExample(playerListA);
+//        flatMapExample(playerListA, playerListB);
+//        minMaxExample(playerListA, playerListB);
+//        reduceAccumulatorExample(playerListA);
+//        reduceExample(playerListA);
     }
 
     private static void streamBasicExample(List<Player> playerListA) {
-        long playersFromWroclaw = playerListA
+        long countGoals = playerListA
                 .stream()
                 .filter(player -> {
                     LOGGER.log(Level.INFO, "Checking player: {0}", player.getLastName());
                     return player.isFrom(CITY);
-                }).count();
-        LOGGER.log(Level.INFO,"Players from Wroclaw: {0}", playersFromWroclaw);
+                })
+                .count();
+        LOGGER.log(Level.INFO, "Total goals count: {0}", countGoals);
     }
 
     private static void reduceExample(List<Player> playerListA) {

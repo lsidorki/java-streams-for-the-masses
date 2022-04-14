@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-// 1
+/**
+ * Example 1
+ */
 public class ActionListenerExample {
 
     public static void main(String[] args) {
